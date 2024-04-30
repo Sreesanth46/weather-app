@@ -1,4 +1,5 @@
 fastapi
 uvicorn
 pymongo[srv]
+pydantic-settings
 requests~=2.31.0
