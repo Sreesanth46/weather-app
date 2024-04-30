@@ -2,6 +2,7 @@ import requests
 from config.config import settings
 from models.weather import Weather
 from utils.cache import cache_location
+from fastapi import HTTPException
 
 
 @cache_location()
@@ -11,7 +12,7 @@ def get_weather_of_city(city_name) -> dict:
     response = requests.get(url)
     data = response.json()
     if data["cod"] != 200:
-        raise Exception("City not found")
+        raise HTTPException(status_code=404, detail="City not found")
 
     weather = Weather(**{
         "longitude": data.get("coord", {}).get("lon"),
