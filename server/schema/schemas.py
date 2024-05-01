@@ -4,8 +4,8 @@ def serializer(model) -> dict:
         "city": model.get("city"),
         "longitude": model.get("longitude"),
         "latitude": model.get("latitude"),
-        "min_temperature": model.get("min_temperature"),
-        "max_temperature": model.get("max_temperature"),
+        "minTemperature": model.get("min_temperature"),
+        "maxTemperature": model.get("max_temperature"),
         "temperature": model.get("temperature"),
         "country": model.get("country"),
     }
