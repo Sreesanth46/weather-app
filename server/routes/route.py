@@ -33,7 +33,7 @@ async def get_weather(location) -> dict:
 
 
 # Delete weather of a city
-@router.delete("/weather/{id}")
+@router.delete("/weather/{_id}")
 async def get_weather(_id):
     """
     :param _id: id of the weather
