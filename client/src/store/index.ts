@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { DEFAULT_LOCATION } from "~/constants/data-constants";
+import { Weather } from "~/types";
 
 interface WeatherState {
   lat: string;
@@ -23,5 +24,20 @@ export const useWeatherStore = create<WeatherState>()((set) => ({
     set((state) => ({
       ...state,
       city,
+    })),
+}));
+
+interface ApiStore {
+  weatherList: Weather[];
+  setWeatherList: (weatherList: Weather[]) => void;
+}
+
+export const useApiStore = create<ApiStore>()((set) => ({
+  weatherList: [],
+
+  setWeatherList: (weatherList) =>
+    set((state) => ({
+      ...state,
+      weatherList,
     })),
 }));
