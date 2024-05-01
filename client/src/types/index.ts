@@ -1,3 +1,12 @@
+type Coordinates = {
+  lon: string;
+  lat: string;
+};
+export type Location = {
+  city: string;
+  coord: Coordinates;
+};
+
 export interface ICity {
   id: number;
   wikiDataId: string;
