@@ -22,3 +22,13 @@ export interface ICity {
   longitude: number;
   population: number;
 }
+
+export interface Weather {
+  city: string;
+  country: string;
+  longitude: number;
+  latitude: number;
+  min_temperature: number;
+  max_temperature: number;
+  temperature: number;
+}
