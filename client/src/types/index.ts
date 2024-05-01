@@ -24,11 +24,12 @@ export interface ICity {
 }
 
 export interface Weather {
+  id: string;
   city: string;
   country: string;
   longitude: number;
   latitude: number;
-  min_temperature: number;
-  max_temperature: number;
+  minTemperature: number;
+  maxTemperature: number;
   temperature: number;
 }
