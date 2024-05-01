@@ -2,6 +2,7 @@ import { env } from "../env";
 
 export const GeoApiBaseUrl = "https://wft-geo-db.p.rapidapi.com/v1/geo";
 export const GeoApiCities = `${GeoApiBaseUrl}/cities?minPopulation=1000000`;
+export const WeatherUrl = `${env.VITE_BACKEND_URL}/weather`;
 
 export const GeoApiOptions = {
   method: "GET",
