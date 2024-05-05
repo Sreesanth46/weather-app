@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+
+from logger import RouteLoggerMiddleware
 from routes.route import router
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -17,5 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_middleware(RouteLoggerMiddleware)
 
 app.include_router(router)

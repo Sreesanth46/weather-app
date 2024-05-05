@@ -3,3 +3,7 @@ uvicorn
 pymongo[srv]
 pydantic-settings
 requests~=2.31.0
+fastlogging~=1.0.0
+pydantic~=2.7.1
+starlette~=0.37.2
+colorama~=0.4.6
